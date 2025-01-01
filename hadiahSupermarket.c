@@ -26,7 +26,9 @@ int main()
         if (scanf("%f", &totalPembelian) != 1 || totalPembelian < 0)
         {
             printf("Input tidak valid. Silahkan masukan angka positif.\n");
-            return 1; // Keluar dari program dengan kode kesalahan
+            while (getchar() != '\n')
+                ;     // Membersihkan buffer input
+            continue; // Meminta Input Ulang
         }
 
         if (totalPembelian >= MIN_PURCHASE) // melakukan fungsi selection untuk menjalankan perintah
